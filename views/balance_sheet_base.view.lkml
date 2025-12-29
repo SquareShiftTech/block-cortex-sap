@@ -1,5 +1,5 @@
 view: balance_sheet {
-  sql_table_name: `@{GCP_PROJECT}.@{REPORTING_DATASET}.BalanceSheet` ;;
+  sql_table_name: `bigquery-expertise.CORTEX_SAP_REPORTING.BalanceSheet` ;;
 
   dimension: amount_in_local_currency {
     type: number

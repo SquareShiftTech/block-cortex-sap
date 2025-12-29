@@ -9,7 +9,7 @@ datagroup: balance_sheet_node_count {
           Level,
           Node
         FROM
-          `@{GCP_PROJECT}.@{REPORTING_DATASET}.BalanceSheet`
+          `bigquery-expertise.CORTEX_SAP_REPORTING.BalanceSheet`
         GROUP BY
           1, 2, 3, 4, 5) t ;;
 
@@ -32,7 +32,7 @@ datagroup: profit_and_loss_node_count {
           GLLevel,
           GLNode
         FROM
-          `@{GCP_PROJECT}.@{REPORTING_DATASET}.ProfitAndLoss`
+          `bigquery-expertise.CORTEX_SAP_REPORTING.ProfitAndLoss`
         GROUP BY
           1, 2, 3, 4, 5) t ;;
 

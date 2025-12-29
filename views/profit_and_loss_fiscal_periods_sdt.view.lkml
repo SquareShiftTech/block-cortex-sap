@@ -8,7 +8,7 @@
 # - max periods in a quarter (used for identify QTD selections)
 #
 # SOURCE
-# Table @{GCP_PROJECT}.@{REPORTING_DATASET}.ProfitAndLoss
+# Table bigquery-expertise.CORTEX_SAP_REPORTING.ProfitAndLoss
 #
 # REFERENCED BY
 # View profit_and_loss_01_reporting_fiscal_periods_sdt
@@ -52,7 +52,7 @@ view: profit_and_loss_fiscal_periods_sdt {
               FiscalYear as fiscal_year,
               FiscalQuarter as fiscal_quarter,
               FiscalPeriod as fiscal_period
-            FROM `@{GCP_PROJECT}.@{REPORTING_DATASET}.ProfitAndLoss`  AS pl
+            FROM `bigquery-expertise.CORTEX_SAP_REPORTING.ProfitAndLoss`  AS pl
             WHERE Client = '@{CLIENT}'
             GROUP BY
               glhierarchy,

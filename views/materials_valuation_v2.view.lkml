@@ -1,6 +1,6 @@
 view: materials_valuation_v2 {
   derived_table: {
-    sql: select * from  `@{GCP_PROJECT}.@{REPORTING_DATASET}.MaterialLedger`
+    sql: select * from  `bigquery-expertise.CORTEX_SAP_REPORTING.MaterialLedger`
       ;;
   }
 

@@ -1,5 +1,5 @@
 view: universal_ledgers_md {
-  sql_table_name: `@{GCP_PROJECT}.@{REPORTING_DATASET}.UniversalLedgersMD` ;;
+  sql_table_name: `bigquery-expertise.CORTEX_SAP_REPORTING.UniversalLedgersMD` ;;
 
   dimension: cash_ledger_indicator_xcash_ledger {
     type: string

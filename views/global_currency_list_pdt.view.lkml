@@ -12,13 +12,13 @@
 
 view: global_currency_list_pdt {
   derived_table: {
-    datagroup_trigger: monthly_on_day_1
+    # datagroup_trigger: monthly_on_day_1
 
     sql: SELECT
             DISTINCT ExchangeRateType_KURST,
             ToCurrency_TCURR
          FROM
-          `@{GCP_PROJECT}.@{REPORTING_DATASET}.CurrencyConversion` ;;
+          `bigquery-expertise.CORTEX_SAP_REPORTING.CurrencyConversion` ;;
   }
 
   dimension: key {

@@ -6,7 +6,7 @@
 #     Assets-->Current Assets-->Cash & Equivalents
 #
 # SOURCE
-# Table `@{GCP_PROJECT}.@{REPORTING_DATASET}.BalanceSheet`
+# Table `bigquery-expertise.CORTEX_SAP_REPORTING.BalanceSheet`
 #
 # REFERENCED BY
 # View balance_sheet_hierarchy_selection_sdt
@@ -17,7 +17,8 @@
 
 view: balance_sheet_path_to_node_pdt {
   derived_table: {
-    datagroup_trigger: balance_sheet_node_count
+    # datagroup_trigger: balance_sheet_node_count
+    persist_for: "2 hours"
     create_process: {
       sql_step:
 
@@ -36,7 +37,7 @@ view: balance_sheet_path_to_node_pdt {
           COALESCE(REGEXP_REPLACE(NodeText,'Non[- ]Current','Noncurrent'),Node) AS NodeText,
           IsLeafNode
         FROM
-          `@{GCP_PROJECT}.@{REPORTING_DATASET}.BalanceSheet`
+          `bigquery-expertise.CORTEX_SAP_REPORTING.BalanceSheet`
         GROUP BY
           Client,
           ChartOfAccounts,

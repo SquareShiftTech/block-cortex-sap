@@ -6,7 +6,7 @@
 #     Net Income (P&L)-->Operating Income-->Gross Margin
 #
 # SOURCE
-# Table `@{GCP_PROJECT}.@{REPORTING_DATASET}.ProfitAndLoss`
+# Table `bigquery-expertise.CORTEX_SAP_REPORTING.ProfitAndLoss`
 #
 # REFERENCED BY
 # View profit_and_loss_hierarchy_selection_sdt
@@ -37,7 +37,7 @@ view: profit_and_loss_path_to_node_pdt {
           COALESCE(GLNodeText,GLNode) AS GLNodeText,
           GLIsLeafNode
         FROM
-          `@{GCP_PROJECT}.@{REPORTING_DATASET}.ProfitAndLoss`
+          `bigquery-expertise.CORTEX_SAP_REPORTING.ProfitAndLoss`
         GROUP BY
           Client,
           ChartOfAccounts,

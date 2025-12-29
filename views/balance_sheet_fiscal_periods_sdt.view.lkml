@@ -7,7 +7,7 @@
 # - prior_fiscal_year_period
 #
 # SOURCE
-# Table @{GCP_PROJECT}.@{REPORTING_DATASET}.BalanceSheet
+# Table bigquery-expertise.CORTEX_SAP_REPORTING.BalanceSheet
 #
 # REFERENCED BY
 # View balance_sheet_fiscal_periods_selected to identify comparison period based on user selections
@@ -36,7 +36,7 @@ view: balance_sheet_fiscal_periods_sdt {
               CompanyCode AS company_code,
               FiscalYear AS fiscal_year,
               FiscalPeriod AS fiscal_period
-            FROM `@{GCP_PROJECT}.@{REPORTING_DATASET}.BalanceSheet`
+            FROM `bigquery-expertise.CORTEX_SAP_REPORTING.BalanceSheet`
             WHERE Client = '@{CLIENT}'
             GROUP BY
               hierarchy_name,

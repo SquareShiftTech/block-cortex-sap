@@ -2,7 +2,7 @@
 view: data_intelligence_ar {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `@{GCP_PROJECT}.@{REPORTING_DATASET}.AccountingDocumentsReceivable`
+  sql_table_name: `bigquery-expertise.CORTEX_SAP_REPORTING.AccountingDocumentsReceivable`
     ;;
 
   parameter: Aging_Interval {

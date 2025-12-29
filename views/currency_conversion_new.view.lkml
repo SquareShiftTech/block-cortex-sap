@@ -1,5 +1,5 @@
 view: currency_conversion_new {
-  sql_table_name: `@{GCP_PROJECT}.@{REPORTING_DATASET}.CurrencyConversion`
+  sql_table_name: `bigquery-expertise.CORTEX_SAP_REPORTING.CurrencyConversion`
     ;;
   
   fields_hidden_by_default: yes

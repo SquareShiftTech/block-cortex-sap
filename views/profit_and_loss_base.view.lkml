@@ -1,5 +1,5 @@
 view: profit_and_loss {
-  sql_table_name: `@{GCP_PROJECT}.@{REPORTING_DATASET}.ProfitAndLoss` ;;
+  sql_table_name: `bigquery-expertise.CORTEX_SAP_REPORTING.ProfitAndLoss` ;;
 
   dimension: amount_in_local_currency {
     type: number
