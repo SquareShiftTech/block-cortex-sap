@@ -121,22 +121,25 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
         {% endif %}
             ) combine
             WINDOW window_alignment AS {{window_alignment}}
-    {% else %}
-        SELECT
-          CAST(NULL AS STRING) AS glhierarchy,
-          CAST(NULL AS STRING) AS company_code,
-          CAST(NULL AS STRING) AS fiscal_year,
-          CAST(NULL AS STRING) AS fiscal_period,
-          CAST(NULL AS STRING) AS fiscal_year_quarter,
-          CAST(NULL AS STRING) AS fiscal_year_period,
-          CAST(NULL AS STRING) AS fiscal_reporting_group,
-          CAST(NULL AS STRING) AS alignment_group,
-          CAST(NULL AS STRING) AS alignment_group_name,
-          CAST(NULL AS STRING) AS selected_timeframe,
-          CAST(NULL AS BOOLEAN) AS is_partial_timeframe,
-          CAST(NULL AS BOOLEAN) AS is_partial_timeframe_in_alignment_group,
-          CAST(NULL AS STRING) AS reporting_timeframes_list
+   {% else %}
+    SELECT
+      CAST(NULL AS STRING) AS glhierarchy,
+      CAST(NULL AS STRING) AS company_code,
+      CAST(NULL AS STRING) AS fiscal_year,
+      CAST(NULL AS STRING) AS fiscal_period,
+      CAST(NULL AS STRING) AS fiscal_year_quarter,
+      CAST(NULL AS STRING) AS fiscal_year_period,
+      CAST(NULL AS STRING) AS fiscal_reporting_group,
+      CAST(NULL AS STRING) AS alignment_group,
+      CAST(NULL AS STRING) AS alignment_group_name,
+      CAST(NULL AS STRING) AS selected_timeframe,
+      CAST(NULL AS BOOLEAN) AS is_partial_timeframe,
+      CAST(NULL AS BOOLEAN) AS is_partial_timeframe_in_alignment_group,
+      CAST(NULL AS STRING) AS max_fiscal_year_period_selected_timeframe,
+      CAST(NULL AS STRING) AS reporting_timeframes_list,
+      CAST(NULL AS STRING) AS selected_time_level
     {% endif %}
+
       ;;
   }
 
