@@ -18,7 +18,7 @@
 view: balance_sheet_path_to_node_pdt {
   derived_table: {
     # datagroup_trigger: balance_sheet_node_count
-    persist_for: "2 hours"
+    persist_for: "24 hours"
     create_process: {
       sql_step:
 
